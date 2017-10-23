@@ -9,18 +9,22 @@ import com.omnilife.interfaces.IEquipo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author Paul Soberanes <paul.soberanes@omnilife.com>
  */
+@Component("messi")
 public class Jugador {
     
     private int numero;
+    @Value("Lionel Messi")
     private String nombre;
     
     @Autowired
-    @Qualifier("barcelonaQualifier")
+//    @Qualifier("barcelonaQualifier")
     private IEquipo equipo;
 
     public int getNumero() {
@@ -43,7 +47,7 @@ public class Jugador {
         return equipo;
     }
 
-//    @Required
+//    @Required 
     public void setEquipo(IEquipo equipo) {
         this.equipo = equipo;
     }
