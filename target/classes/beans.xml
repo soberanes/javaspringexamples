@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+    <context:annotation-config />
+<!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>-->
+<!--    <bean class="com.omnilife.beans.OmnilifeBeanPostProcessor"></bean>-->
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+    
+<!--    <bean id="persona" class="com.omnilife.beans.Persona" autowire="byType">
+        <property name="apodo" value="omniguy"></property>
+    </bean>
+    
+    <bean id="pais" class="com.omnilife.beans.Pais">
+        <property name="nombre" value="Peru"></property> 
+    </bean>
+    
+    <bean id="ciudad" class="com.omnilife.beans.Ciudad">
+        <property name="nombre" value="Lima"></property>
+    </bean>-->
+
+    <bean id="messi" class="com.omnilife.beans.Jugador">
+        <property name="numero" value="10"></property>
+        <property name="nombre" value="Lionel Messi"></property>
+        <!--<property name="equipo" ref="barcelona"></property>-->
+    </bean>
+    
+    <bean id="barcelona" class="com.omnilife.beans.Barcelona">
+        <qualifier value="barcelonaQualifier"></qualifier>
+    </bean>
+    <bean id="juventus" class="com.omnilife.beans.Juventus"></bean>
+        
+</beans>

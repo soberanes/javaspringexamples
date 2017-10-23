@@ -1,0 +1,6 @@
+#surefire
+#Mon Oct 16 16:44:12 CDT 2017
+maven.ext.class.path=/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar
+user.dir=/Users/paul.soberanes/NetBeansProjects/spring
+localRepository=/Users/paul.soberanes/.m2/repository
+basedir=/Users/paul.soberanes/NetBeansProjects/spring
