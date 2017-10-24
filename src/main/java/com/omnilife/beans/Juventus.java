@@ -6,11 +6,13 @@
 package com.omnilife.beans;
 
 import com.omnilife.interfaces.IEquipo;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author Paul Soberanes <paul.soberanes@omnilife.com>
  */
+@Component
 public class Juventus implements IEquipo{
 
     @Override

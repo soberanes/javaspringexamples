@@ -5,10 +5,13 @@
  */
 package com.omnilife.beans;
 
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author Paul Soberanes <paul.soberanes@omnilife.com>
  */
+@Component
 public class Marca {
     private int id;
     private String nombre;

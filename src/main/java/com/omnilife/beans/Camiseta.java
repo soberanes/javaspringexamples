@@ -6,11 +6,13 @@
 package com.omnilife.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author Paul Soberanes <paul.soberanes@omnilife.com>
  */
+@Component
 public class Camiseta {
     private int id;
     private int numero;

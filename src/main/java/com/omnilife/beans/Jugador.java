@@ -6,16 +6,23 @@
 package com.omnilife.beans;
 
 import com.omnilife.interfaces.IEquipo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author Paul Soberanes <paul.soberanes@omnilife.com>
  */
+@Component
 public class Jugador {
     
    private int id;
    private String nombre;
+   @Autowired
+   @Qualifier("barcelona")
    private IEquipo equipo;
+   @Autowired
    private Camiseta camiseta;
 
     public int getId() {
