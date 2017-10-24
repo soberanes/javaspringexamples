@@ -7,10 +7,13 @@ package com.omnilife.spring;
 
 import com.omnilife.beans.AppConfig;
 import com.omnilife.beans.AppConfig2;
+import com.omnilife.beans.Barcelona;
 import com.omnilife.beans.Ciudad;
 import com.omnilife.beans.Jugador;
+import com.omnilife.beans.Juventus;
 import com.omnilife.beans.Persona;
 import com.omnilife.interfaces.IEquipo;
+import java.util.Scanner;
 import javax.annotation.Resource;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -29,13 +32,29 @@ public class App {
      */
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Elija un equipo: 1- Barcelona 2-Juventus");
+        int respuesta = sc.nextInt();
+        
         ApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
-        Jugador per = (Jugador) appContext.getBean("messi");
-//        IEquipo bar = (IEquipo) appContext.getBean("juventus");
+        Jugador per = (Jugador) appContext.getBean("jugador1");
+        
+        switch(respuesta){
+            case 1: 
+                per.setEquipo(new Barcelona());
+                break;
+            case 2:
+                per.setEquipo(new Juventus());
+                break;
+            default:
+                break;
+        }
+        
+        
 
-        System.out.println(per.getNombre() + "-" + per.getEquipo().mostrar());
-
-//        System.out.println(bar.mostrar());
+        System.out.println(per.getNombre() + "-" + per.getEquipo().mostrar()
+                + "-" + per.getCamiseta().getNumero() 
+                + "-" + per.getCamiseta().getMarca().getNombre());
         ((ConfigurableApplicationContext) appContext).close();
     }
 

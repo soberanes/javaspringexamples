@@ -8,8 +8,8 @@
     <context:component-scan base-package="com.omnilife.beans"></context:component-scan>
 <!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>-->
 <!--    <bean class="com.omnilife.beans.OmnilifeBeanPostProcessor"></bean>-->
-    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
-    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+<!--    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>-->
     
 <!--    <bean id="persona" class="com.omnilife.beans.Persona" autowire="byType">
         <property name="apodo" value="omniguy"></property>
@@ -34,4 +34,26 @@
     </bean>
     <bean id="juventus" class="com.omnilife.beans.Juventus"></bean>-->
         
+        
+    <bean id="jugador1" class="com.omnilife.beans.Jugador">
+        <property name="id" value="1"></property>
+        <property name="nombre" value="Omniguy"></property>
+        <property name="equipo" ref="barcelona"></property>
+        <property name="camiseta" ref="camiseta"></property>
+    </bean>
+    
+    <bean id="barcelona" class="com.omnilife.beans.Barcelona"></bean>
+    <bean id="juventus" class="com.omnilife.beans.Juventus"></bean>
+
+    <bean id="camiseta" class="com.omnilife.beans.Camiseta">
+        <property name="id" value="1"></property>
+        <property name="numero" value="10"></property>
+        <property name="marca" ref="marca1"></property>
+    </bean>
+    
+    <bean id="marca1" class="com.omnilife.beans.Marca">
+        <property name="id" value="1"></property>
+        <property name="nombre" value="Marca OK 1"></property>
+    </bean>
+            
 </beans>
