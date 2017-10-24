@@ -7,9 +7,6 @@ package com.omnilife.beans;
 
 import com.omnilife.interfaces.IEquipo;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 /**
  *

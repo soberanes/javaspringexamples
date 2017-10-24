@@ -5,21 +5,13 @@
  */
 package com.omnilife.spring;
 
-import com.omnilife.beans.AppConfig;
-import com.omnilife.beans.AppConfig2;
 import com.omnilife.beans.Barcelona;
-import com.omnilife.beans.Ciudad;
 import com.omnilife.beans.Jugador;
 import com.omnilife.beans.Juventus;
-import com.omnilife.beans.Persona;
-import com.omnilife.interfaces.IEquipo;
 import java.util.Scanner;
-import javax.annotation.Resource;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.ClassPathResource;
 
 /**
  *
